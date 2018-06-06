@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="shortcut icon" href="#" />
+<head>
+	<meta charset="UTF-8">
+	<title>Q Learning App</title>
+</head>
+<body>
+	<div id="scene">
+		<div id="grid"></div>
+
+			<div id="properties">
+				<!-- 
+					Harita oluşturmak için alınacak girdiler.
+					txtRow: oyun sahnesinin (GRID) boyutu.
+					txtIteration: oyunun kaç kere tekrar edeceği
+					txtAlpha: q learning algoritmasındaki öğrenme katsayısı (0-1)
+				-->
+				<div class="processInput">
+			         <span class="txtRow">
+					    <input class="swing" id="txtRow" type="text" placeholder="Karenin boyutunu girmelisin." /><label for="txtRow">Sahne</label>
+					 </span>
+					  <span class="txtIteration">
+					    <input class="swing" id="txtIteration" type="text" placeholder="Kaç kere tekrarlasın?" /><label for="txtIteration">Döngü</label>
+					 </span>
+					 <span class="txtAlpha">
+					    <input class="swing" id="txtAlpha" type="text" placeholder="Öğrenme yeteneğin ne kadar?(0-1.0)" /><label for="txtAlpha">Eğitim</label>
+					 </span>
+				</div>
+                
+                <div id="infoItem"></div>
+	            <div id="floorsFrame">
+					<img src="img/block.png" class="floors" id="imgBlock"/>
+					<img src="img/middle.png" class="floors" id="imgMiddle"/>
+					<img src="img/box.png" class="floors" id="imgBox"/>
+					<img src="img/goal.png" class="floors" id="imgGoal"/>
+	            </div>
+				
+				<div id="speedContainer">
+					<label for="volume">Hız:</label>
+ 					<input id="volume" type="range" min="1" max="100" value="50" step="1">
+ 					<label id="speed" for="volume">50</label>
+
+				</div>
+	            <!-- 
+					Öğrenmenin zaman aldığı süreçler için öncesinde sisteme harita adapte edilmiştir.
+				-->
+
+				<div class="green" id="maps">
+					<h3> HARİTALAR</h3>
+		            <button type="button" onclick="exams('data3x3')">(3x3)</button>
+		            <button type="button" onclick="exams('data4x4')">(4x4)</button>
+		            <button type="button" onclick="exams('data5x5')">(5x5)</button>
+		            <button type="button" onclick="exams('data6x6')">(6x6)</button>
+		            <button type="button" onclick="exams('data7x7')">(7x7)</button><br>
+		            <button type="button" onclick="exams('data8x8')">(8x8)</button>
+		            <button type="button" onclick="exams('data9x9')">(9x9)</button>
+		            <button type="button" onclick="exams('data10x10')">(10x10)</button>
+		            <button type="button" onclick="exams('data15x15')">(15x15)</button>
+		            <button type="button" onclick="exams('data20x20')">(20x20)</button>		          
+	        	</div>
+	        	<div id="infoMapContainer">
+	        		<div id="infoMap"></div>
+	        	</div>
+				<div class="processResult green">				
+		            <button type="button" onclick="download()" class="saveResult">Sonucu Kaydet</button>
+		            <button type="button" onclick="solution()" class="loadResult">Çözümü Çalıştır</button>
+	            </div>
+	            <div class="processResult blue"><button type="button" class="btnStart">Başla</button></div>
+           	</div>
+		</div>
+	</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
