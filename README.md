@@ -1,4 +1,4 @@
-###Yapay Zeka ile Labirentten Kaçma Oyunu
+# Yapay Zeka ile Labirentten Kaçma Oyunu
 
 ###### Ödüllü öğrenme (Reinforcement Learning) uygulamalarından biri olan Q Learning  uygulamasıdır.
                 
@@ -15,7 +15,7 @@ Uygulama arayüzü:
 - **Çözümü çalıştır:** Haritanın önceden çözülmüş olan sonucu getirir. Sonuca göre yollardaki yönlerin ağırlıkları güncellenir.
 - **Başla:** Girilen değerlere ve yaratılan haritaya göre algoritma çalıştırılır.
 
-###Arayüz görselleri
+### Arayüz görselleri
                 
 ----
 ![](img/2.png)
